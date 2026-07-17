@@ -1,4 +1,4 @@
-# Basics-of-C-
+# Basics-of-C++
 My First Repository
 <br>
 Author - Shiv Patil
