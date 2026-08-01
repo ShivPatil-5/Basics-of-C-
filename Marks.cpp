@@ -9,7 +9,7 @@ int main ()
     cin >> marks;
 
     if(marks <= 100)
-    {
+    {  
         if(marks >= 90)
          cout << "Grade A" << endl;
 
