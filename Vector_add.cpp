@@ -9,6 +9,7 @@ int main()
     char c{};
     do
     {
+      //input menu
       cout << "\n--------------" << endl;
       cout << "P - Print List" << endl;
       cout << "A - Add number" << endl;
@@ -19,6 +20,7 @@ int main()
       cout << "Enter your choice : ";
       cin >> c;
       
+      //Print list Option
       if(c=='p' || c=='P')
       {
         if(vec.size()!=0)
@@ -35,6 +37,7 @@ int main()
         cout << "list of numbers - []"<< endl;
       }
 
+      //Add number option
       else if(c=='a' || c=='A')
       {
         cout << "Enter a number to add in the list : ";
@@ -42,7 +45,8 @@ int main()
         cin >> input;
         vec.push_back(input);
       }
-
+      
+      //Mean of numbers in the list option
       else if(c=='m' || c=='M')
       {
         int sum,mean;
@@ -54,6 +58,7 @@ int main()
         cout << "Mean of the list is : " << mean << endl;
       }
 
+      //Smallest number in the list option
       else if(c=='s' || c=='S')
       {
         int s;
@@ -65,6 +70,7 @@ int main()
         cout << "smallest number in the list is : " << s << endl;
       }
 
+      //largest number in the list option
       else if(c=='l' || c=='L')
       {
         int l;
@@ -81,6 +87,7 @@ int main()
     }
     while(c!='q' && c!='Q');
 
+    //works when the loop if discontinued on entering q/Q
     cout << "Thank you";
 
     return 0;
