@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
     string alphabets{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:',.<>/?`~ "};
     string key{"dJY+9tE{[z;C]BmOZr?<5~%'7feq64i=nFhNc8}o$WKU|@g&_LXkQ2a.:SG!*D`PR>j Asv#0^lTx(w)H,p/u3-IyVMb1"};
     string message;
@@ -17,39 +18,50 @@ int main() {
     // Clear the trailing newline character from the buffer
     cin.ignore(); 
 
-    if(a == 1) {
+    if(a == 1) 
+    {
         cout << "Enter message to encrypt:" << endl;
         getline(cin, message); // Reads the whole line, including spaces
         
-        string temp = "";
+        string temp = ""; //To hold the scambled message
         int len = message.length();
-        for(int i = 0; i < len; i++) {
+        for(int i = 0; i < len; i++) 
+        {
             size_t found = alphabets.find(message.at(i));
-            if (found != string::npos) {
-                temp = temp + key.at(found);
-            } else {
-                temp = temp + message.at(i); // Keep character as-is if not found
+            if (found != string::npos) 
+            {
+                temp += key.at(found);
+            } 
+            else 
+            {
+                temp += message.at(i); // Keep character as-is if not found
             }
         }
         cout << "Encrypted message: " << temp << endl;
     } 
-    else if(a == 2) {
+    else if(a == 2) 
+    {
         cout << "Enter message to decrypt:" << endl;
         getline(cin, message); // Reads the whole line, including spaces
         
         string temp = "";
         int len = message.length();
-        for(int i = 0; i < len; i++) {
+        for(int i = 0; i < len; i++) 
+        {
             size_t found = key.find(message.at(i));
-            if (found != string::npos) {
+            if (found != string::npos) 
+            {
                 temp = temp + alphabets.at(found);
-            } else {
+            } 
+            else 
+            {
                 temp = temp + message.at(i); // Keep character as-is if not found
             }
         }
         cout << "Decrypted message: " << temp << endl;
     } 
-    else {
+    else 
+    {
         cout << "Wrong Choice, try again!" << endl;
     }
 
