@@ -53,5 +53,10 @@ int main() {
         cout << "Wrong Choice, try again!" << endl;
     }
 
+    /*getline(cin, message): Replaced cin >> message to capture entire sentences with spaces intact.
+    cin.ignore(): Added right after cin >> a to flush the newline character out of the input buffer so getline functions properly.
+    Added Space to Strings: Added a space character " " to the very end of both alphabets and key variables so spaces can be mapped and ciphered securely.
+    if (found != string::npos): Added an explicit safety check. If a character isn't supported, it passes through safely instead of crashing your software.*/
+
     return 0;
 }
